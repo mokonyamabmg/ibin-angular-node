@@ -1,0 +1,23 @@
+ul {
+  list-style: none;
+}
+
+li {
+  margin-top: 20px;
+}
+
+a{
+  font-size: 20px;
+  background: none !important;
+  color: #ffff;
+  font-weight: 400;
+}
+
+a:hover {
+  border: 3px solid #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffff;
+}

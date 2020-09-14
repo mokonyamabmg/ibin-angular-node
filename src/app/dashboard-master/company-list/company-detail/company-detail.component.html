@@ -1,0 +1,105 @@
+
+
+<div class="progress-loader mt-5 py-5" *ngIf="isLoading">
+
+    <mat-progress-spinner [mode]="'indeterminate'">
+    </mat-progress-spinner>
+
+</div>
+
+<div class="container adminContainer  mt-5 py-3" style="background:#efefef;" *ngIf="!isLoading">
+
+<h3 class="ml-2 text-dark mt-3">Administrator</h3>
+
+  <div class="row">
+
+  <div class="col-sm-6 text-dark">
+      <table>
+      <tbody>
+          <tr>
+              <td><img src="assets/images/placeholder.png" alt="logo" width="60px"></td>
+              <td class="font-weight-bold"> Name</td>
+              <td>{{username}} {{usersurname}}</td>
+          </tr>
+          <tr>
+              <td></td>
+              <td class="font-weight-bold"> Email</td>
+              <td>{{useremail}}</td>
+           </tr>
+      </tbody>
+      </table>
+  </div>
+</div>
+</div><br>
+
+
+
+<div class="container py-4 companyContainer" style="background:#efefef;" *ngIf="!isLoading">
+  <h3 class="ml-2 text-dark">Company Information</h3>
+<div class="row">
+      <div class="col-lg-12 pr-5">
+      <a class="btn-edit py-2 float-right px-4 text-dark" id="edit-company" (click)="onEdit()">EDIT</a>
+      </div>
+
+</div>
+
+  <div class="row">
+          <div class="col-lg-6 text-dark ">
+
+          <table>
+              <tbody>
+                  <tr>
+                      <td> </td>
+                      <td class="font-weight-bold">Company Name</td>
+                      <td>{{name}}</td>
+                  </tr>
+                  <tr>    <td> </td>
+                    <td class="font-weight-bold"> Country</td>
+                    <td>{{domicile}}</td>
+                  </tr>
+                  <tr>    <td> </td>
+                    <td class="font-weight-bold"> Founded</td>
+                    <td>{{date_founded}}</td>
+                  </tr>
+                  <tr>    <td> </td>
+                          <td class="font-weight-bold"> Ibin</td>
+                          <td>{{ibin}}</td>
+                   </tr>
+
+                   <tr>
+                          <td> </td>
+                          <td class="font-weight-bold"> Email</td>
+                          <td>{{email}}</td>
+                   </tr>
+
+                   <tr>
+                          <td> </td>
+                          <td class="font-weight-bold"> Webpage</td>
+                          <td>{{website}}</td>
+                   </tr>
+
+
+
+              </tbody>
+          </table>
+          </div>
+          <div class="col-lg-6 text-dark  mt-5">
+
+                <table class="offset-md-3">
+                      <tbody>
+                          <tr>
+
+                              <td class="font-weight-bold"> </td>
+                          <td> <img class="com-profile" src="{{imagePath}}" [alt]="name" width="170"></td>
+                          </tr>
+
+                      </tbody>
+                  </table>
+
+          </div>
+      </div>
+
+      <br>
+
+</div>
+

@@ -1,0 +1,37 @@
+<mdb-card class="px-0" *ngIf="companies">
+
+
+    <mdb-card-body class="p-0">
+        <div class="progress-loader mt-5 py-5" *ngIf="isLoading">
+
+            <mat-progress-spinner [mode]="'indeterminate'">
+            </mat-progress-spinner>
+
+        </div>
+
+        <table class="text-dark table-striped" *ngIf="!isLoading">
+            <thead>
+              <tr>
+
+                <th>Logo</th>
+                <th>Company Name</th>
+                <th>IBIN No.</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let company of companies">
+                  <td data-column="Logo"><br><img src="{{company?.imagePath}}" [alt]="company.name" width="60px" height="40px"></td>
+                <td data-column="Company Name"><br>{{company.name}}</td>
+                 <td data-column="IBIN No."><br>{{company.ibin}}</td>
+                 <td data-column=""><br><a [routerLink]="['/dashboard/edit', company.id]" class="px-5 py-2" mdbBtn color="primary" outline="true" mdbWavesEffect >More</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+    </mdb-card-body>
+    </mdb-card>
+
+
+
+

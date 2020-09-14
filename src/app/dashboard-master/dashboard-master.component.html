@@ -1,0 +1,43 @@
+
+<section class="about-banner about-banner-padding">
+  <div class="container-fluid">
+      <h1 class="text-white text-center">{{title}}</h1>
+  </div>
+</section>
+
+  <div class="jumbotron">
+      <h3 class="text-center text-white font-weight-bold" id="dashboard_header">Dashboard</h3>
+  </div>
+
+<section>
+
+      <div class="container-fluid">
+            <div class="row">
+                  <div class="col-lg-3 color-grey">
+
+                    <ul>
+                      <li><a routerLink="/dashboard">DASHBOARD</a></li>
+                      <li><a routerLink="/dashboard/security">SECURITY</a></li>
+                      <li><a routerLink="/dashboard/contact">CONTACT</a></li>
+                    </ul>
+
+                  </div>
+
+             <div class="col-lg-9 px-5 pb-5 pt-1">
+                <div class="row imgputup">
+                    <div class="col-lg-4">
+                            <a routerLink="/dashboard/register" class="ml-5"><img src='assets/images/Add Business Button@2x.png'></a>
+                    </div>
+                    <div class="col-lg-4">
+                    </div>
+                    <div class="col-lg-4">
+                             <a routerLink="" class="ml-4"><img src="assets/images/Dashboard Hexa Button@2x.png"></a>
+                     </div>
+                </div>
+                 <router-outlet></router-outlet>
+
+             </div>
+      </div>
+</div>
+
+</section>

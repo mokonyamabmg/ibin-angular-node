@@ -1,0 +1,155 @@
+<section class="py-5">
+
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-6">
+
+            <mdb-card>
+              <mdb-card-header class="info-color white-text text-center">
+                  <h3 class="text-dark  font-weight-bold ml-4">Get in touch with our support team</h3><br>
+                </mdb-card-header>
+
+                <mdb-card-body class="px-lg-5 pt-0">
+                  <form (submit)="onLoginForm(loginForm)" #loginForm="ngForm">
+
+      <!-- E-mail -->
+                      <div class="md-form mt-0">
+                          <input type="text" id="materialRegisterFormEmail" class="form-control" name="name" ngModel #nameInput="ngModel" required mdbInput>
+                          <mdb-error *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)">Please Enter Valid First Name</mdb-error>
+                          <label for="materialRegisterFormEmail">First Name</label>
+                      </div>
+
+                      <div class="md-form mt-0">
+                        <input type="text" id="materialRegisterFormEmail" class="form-control" name="surname" ngModel #surnameInput="ngModel" required mdbInput>
+                        <mdb-error *ngIf="surnameInput.invalid && (surnameInput.dirty || surnameInput.touched)">Please Enter Valid Last Name</mdb-error>
+                        <label for="materialRegisterFormEmail">Last Name</label>
+                    </div>
+
+                    <div class="md-form mt-0">
+                      <input type="text" id="materialRegisterFormEmail" class="form-control" name="telephone" ngModel #telephoneInput="ngModel" required mdbInput>
+                      <mdb-error *ngIf="telephoneInput.invalid && (telephoneInput.dirty || telephoneInput.touched)">Please Enter Valid Telephone</mdb-error>
+                      <label for="materialRegisterFormEmail">Telephone</label>
+                  </div>
+
+                  <div class="md-form mt-0">
+                    <input type="email" id="materialRegisterFormEmail" class="form-control" name="email" ngModel #emailInput="ngModel" required email mdbInput>
+                    <mdb-error *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">Please Enter Valid Email</mdb-error>
+                    <label for="materialRegisterFormEmail">E-mail</label>
+                </div>
+
+                  <div class="md-form mt-0">
+                      <textarea type="text" id="materialContactFormMessage" class="form-control md-textarea" name="message" ngModel #messageInput="ngModel" required mdbInput></textarea>
+                    <mdb-error *ngIf="messageInput.invalid && (messageInput.dirty || messageInput.touched)">Please Enter Valid Message</mdb-error>
+                    <label for="materialRegisterFormEmail">Message</label>
+                </div>
+
+                      <button mdbBtn color="primary" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+                          type="submit" [disabled]="!loginForm.valid">Send Message
+                      </button>
+
+                  </form>
+                </mdb-card-body>
+            </mdb-card>
+
+          </div>
+
+
+
+
+          <div class="col-lg-6 ">
+
+  <div class="container-fluid" style="margin: 0 auto; width:80%">
+
+      <h4 CLASS="text-dark text-center mt-5">FREQUENLTY ASKED QUESTIONS</h4><br><br>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <i class="fa fa-plus more-less "></i>
+          WHAT IS IBIN?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body text-dark ">
+          <p class="text-justify">International Blockshare Identification Number (IBIN) is a 13 digit code that is comprised of numbers and letters that uniquely identifies equity on the blockchain. It is the first of its kind on the blockchain and it is similar to ISIN (International Securities Identification Number) that is used in the traditional markets. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <i class="fa fa-plus more-less"></i>
+          WHAT IS BLOCKCHAIN?
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body text-dark">
+        <p class="text-justify">Blockchain is a digital, decentralized and distributed public ledger consisting of transactions. Its origins can be traced to Bitcoin, where it was initially used for accounting purposes. Completed transactions are grouped together in blocks, the grouped blocks create a chain, hence the name blockchain. Individual blocks are secured by cryptography and the blocks are immutable by design. Blockchain has evolved from its use for accounting purposes and it now has different usages. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <i class="fa fa-plus more-less"></i>
+          OBTAIN
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body text-dark">
+        <p class="text-justify">Companies that wish to obtain an IBIN, simply need to apply on IBIN.io. After all the requirements have been met, an IBIN will be generated. </p>
+      </div>
+    </div>
+      </div>
+
+      <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFour">
+                  <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          <i class="fa fa-plus more-less"></i>
+                         FEES
+                      </a>
+                  </h4>
+              </div>
+              <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                  <div class="panel-body text-dark">
+                      <p class="text-justify">IBIN registration is free of charge. This limited time offer is available for the first 75 companies until the 31st August 2019. </p>
+                  </div>
+              </div>
+      </div>
+
+      <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingFive">
+                  <h4 class="panel-title">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          <i class="fa fa-plus more-less"></i>
+                         WHAT IS HYBSE?
+                      </a>
+                  </h4>
+              </div>
+              <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                  <div class="panel-body text-dark">
+                      <p class="text-justify">HYBSE (Hybrid Stock Exchange) is an online equity exchange that offers users and issuers a borderless platform to trade cryptonized equity. Companies that wish to list cryptonized securities on HYBSE for example, will require an IBIN. </p>
+                  </div>
+              </div>
+      </div>
+
+
+</div>
+
+  </div>
+</div>
+
+          </div>
+      </div>
+
+</section>

@@ -1,0 +1,33 @@
+<mdb-card>
+    <mdb-card-header class="info-color white-text text-center py-0">
+        <h4 class="text-dark text-center mt-3">CHANGE PASSWORD</h4><br><br>
+    </mdb-card-header>
+
+    <mdb-card-body class="px-5">
+        <form (submit)="onLoginForm(loginForm)" #loginForm="ngForm">
+
+            <!-- E-mail -->
+            <div class="md-form">
+                <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+                name="oldpassword" ngModel #oldpasswordInput="ngModel" required mdbInput>
+                <mdb-error *ngIf="oldpasswordInput.invalid && (oldpasswordInput.dirty || oldpasswordInput.touched)">Please Enter Valid Old Password</mdb-error>
+                <label for="materialRegisterFormPassword">Old Password</label>
+            </div>
+
+            <div class="md-form">
+                <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+                name="password" ngModel #passwordInput="ngModel" required mdbInput>
+                <mdb-error *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">Please Enter Valid Password</mdb-error>
+                <label for="materialRegisterFormPassword">Password</label>
+            </div>
+
+                            <button mdbBtn color="primary" outline="true"  mdbWavesEffect rounded="true" block="true" class="my-4 waves-effect z-depth-0"
+                                type="submit" [disabled]="!loginForm.valid">Change Password
+                            </button>
+
+                        </form>
+
+
+
+    </mdb-card-body>
+</mdb-card>

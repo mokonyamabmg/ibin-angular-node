@@ -1,0 +1,54 @@
+
+<section style="color:black;" class="py-5">
+
+    <div class="progress-loader mt-5 py-5" *ngIf="isLoading">
+
+        <mat-progress-spinner [mode]="'indeterminate'">
+        </mat-progress-spinner>
+
+    </div>
+
+  <div class="container-fluid" style="width:80%; margin:auto;" *ngIf="!isLoading">
+
+      <div class="header-bar font-weight-bold"><h3>Company Information</h3></div>
+          <div class="container mt-5 table-responsive">
+              <div class="row">
+                  <div class="col-md-10">
+                      <table>
+                              <tr>
+                                  <td class="font-weight-bold" width="30%">Business Name</td>
+                                  <td width="70%">{{name}}</td>
+                              </tr>
+                               <tr>
+                                  <td class="font-weight-bold">Established</td>
+                                  <td>{{founding_date}}</td>
+                               </tr>
+                               <tr>
+                                  <td class="font-weight-bold">IBIN</td>
+                                  <td>{{ibin}}</td>
+                               </tr>
+                               <tr>
+                                  <td class="font-weight-bold">Country</td>
+                                  <td>{{domicile}}</td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold">Email</td>
+                                  <td>{{email}}</td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold">Website</td>
+                                  <td>{{website}}</td>
+                              </tr>
+                          </table>
+                  </div>
+                  <div class="col-md-2">
+                      <img class="profile_logo mt-5" src="{{imagePath}}" [alt]="name">
+                  </div>
+              </div>
+           </div>
+
+
+
+      </div>
+
+</section>

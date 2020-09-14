@@ -1,0 +1,52 @@
+
+<mdb-card class="px-0" *ngIf="companies">
+
+
+    <mdb-card-body class="p-0">
+
+
+  <div class="container-fluid" style="width:90%; margin:auto;">
+
+      <div class="progress-loader mt-5 py-5" *ngIf="isLoading">
+
+          <mat-progress-spinner [mode]="'indeterminate'">
+          </mat-progress-spinner>
+
+      </div>
+
+
+          <div class="table-responsive mb-5" *ngIf="!isLoading">
+              <table class="table table-hover table-striped">
+                      <thead >
+                      <tr>
+                          <th scope="col">Logo</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Country</th>
+                          <th scope="col">IBIN</th>
+                          <th scope="col">Date Founded</th>
+                          <th scope="col">Info</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+
+                        <tr *ngFor="let company of companies">
+                          <td><img src="{{company?.imagePath}}" [alt]="company.name" width="30"></td>
+                              <td>{{company.name}}</td>
+                              <td>{{company.email}}</td>
+                              <td>{{company.domicile}}</td>
+                              <td>{{company.ibin}}</td>
+                              <td>{{company.founding_date}}</td>
+                          <td><a (click)="onViewDetails(company.id)"><i class="fa fa-angle-down"></i></a></td>
+                          </tr>
+
+                      </tbody>
+
+                  </table>
+
+
+              </div>
+      </div>
+
+    </mdb-card-body>
+</mdb-card>

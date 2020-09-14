@@ -1,0 +1,72 @@
+<mdb-card class="px-0">
+
+  <mdb-card-header class="info-color white-text text-center py-0">
+      <h4 class="text-dark text-center mt-3">Edit COMPANY</h4><br><br>
+  </mdb-card-header>
+
+  <mdb-card-body class="px-lg-5 pt-0">
+
+<div class="progress-loader mt-5 py-5" *ngIf="isLoading">
+
+    <mat-progress-spinner [mode]="'indeterminate'">
+    </mat-progress-spinner>
+
+</div>
+
+      <form [formGroup]="form" (submit)="onEditCompany()" *ngIf="!isLoading">
+
+          <!-- E-mail -->
+                          <div class="md-form mt-2">
+                              <input type="text" id="materialRegisterFormEmail" class="form-control" name="name" formControlName="name" mdbInput>
+                              <mdb-error class="mb-2" *ngIf="form.get('name').invalid && (form.get('name').dirty || form.get('name').touched)">Please Enter Valid Company Name</mdb-error>
+                              <label for="materialRegisterFormEmail">Company Name</label>
+                          </div>
+
+                          <div class="md-form mt-2">
+                              <input type="date" id="input" class="form-control" name="date" formControlName="date" mdbInput>
+                            <mdb-error class="mb-2" *ngIf="form.get('date').invalid && (form.get('date').dirty || form.get('date').touched)">Please Enter Valid Founding Date</mdb-error>
+                        </div>
+
+                          <div class="md-form mt-0">
+                              <input type="email" id="materialRegisterFormEmail" class="form-control" name="email" formControlName="email" email mdbInput>
+                              <mdb-error  class="mb-2" *ngIf="form.get('email').invalid && (form.get('email').dirty || form.get('email').touched)">Please Enter Valid Email</mdb-error>
+                              <label for="materialRegisterFormEmail">E-mail</label>
+                          </div>
+
+                        <div class="md-form mt-0">
+                          <input type="text" id="materialRegisterFormEmail" class="form-control" name="website" formControlName="website" mdbInput>
+                          <mdb-error class="mb-2" *ngIf="form.get('website').invalid && (form.get('website').dirty || form.get('website').touched)">Please Enter Valid Website</mdb-error>
+                          <label for="materialRegisterFormEmail">Website</label>
+                      </div>
+
+
+
+                      <div class="md-form mt-0">
+                          <select class="form-control" name="country" formControlName="country">
+                              <option selected disabled>Select Country*</option>
+                                <option value="USA">USA</option>
+                                <option value="South Africa">South Africa</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Sitzerland">Sitzerland</option>
+                                <option value="England">England</option>
+                                <option value="China">China</option>
+                          </select>
+                        <mdb-error *ngIf="form.get('country').invalid && (form.get('country').dirty || form.get('country').touched)">Please Enter Valid Country</mdb-error>
+                    </div>
+                    <div class="col-md-6 md-form">
+                      <button mdbBtn type="button" id="materialCompanyLogo" (click)="filePicker.click()" class="px-5 py-1 form-control" color="primary" outline="true"  mdbWavesEffect>
+                        <mdb-icon fas icon="file-upload"></mdb-icon>
+                      </button>
+                      <label for="materialCompanyLogo" class="mt-4">Upload Company Logo</label>
+                      <input type="file" #filePicker (change)="onImagePicked($event)">
+                    </div>
+                    <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+                        <img [src]="imagePreview" [alt]="form.value.name">
+                    </div>
+                          <button mdbBtn color="primary" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+                              type="submit" >Edit Company
+                          </button>
+
+                      </form>
+  </mdb-card-body>
+</mdb-card>

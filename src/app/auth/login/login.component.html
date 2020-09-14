@@ -1,0 +1,54 @@
+
+
+<div class="container py-5" >
+
+
+        <div class="row justify-content-center ">
+          <div class="col-md-8">
+
+
+
+                <mdb-card>
+                    <mdb-card-header class="info-color white-text text-center">
+                        <h3 class="text-dark  font-weight-bold ml-4">Admin Login</h3><br>
+                      </mdb-card-header>
+
+                      <mdb-card-body class="px-lg-5 pt-0">
+
+                          <div class="progress-loader mt-5 py-5" *ngIf="isLoading">
+
+                              <mat-progress-spinner [mode]="'indeterminate'">
+                              </mat-progress-spinner>
+
+                          </div>
+                        <form (submit)="onLoginForm(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+
+
+                            <div class="md-form mt-0">
+                                <input type="email" id="materialRegisterFormEmail" class="form-control" name="email" ngModel #emailInput="ngModel" required email mdbInput>
+                                <mdb-error *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">Please Enter Valid Email</mdb-error>
+                                <label for="materialRegisterFormEmail">E-mail</label>
+                            </div>
+
+
+                            <div class="md-form">
+                                <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+                                name="password" ngModel #passwordInput="ngModel" required mdbInput>
+                                <mdb-error *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">Please Enter Valid Password</mdb-error>
+                                <label for="materialRegisterFormPassword">Password</label>
+                                    <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                                        At least 8 characters and 1 digit
+                                    </small>
+                            </div>
+
+                            <button mdbBtn color="primary" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+                                type="submit" [disabled]="!loginForm.valid">Sign in
+                            </button>
+
+                        </form>
+                      </mdb-card-body>
+                  </mdb-card>
+            </div>
+        </div>
+      </div>
+

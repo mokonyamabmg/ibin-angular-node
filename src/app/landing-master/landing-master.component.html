@@ -1,0 +1,92 @@
+<section class="home-banner py-5">
+  <br><br><br><br><br><br>
+<div class="row">
+  <div class="rectangle py-3 px-3">
+      <div class="row mt-5 mb-5 ">
+
+      <div class="col-lg-6 col-md-12 col-sm-12 px-5">
+          <h2 class="display-4 girl-bye font-weight-bold">International</h2>
+          <h2 class="display-4 girl-bye font-weight-bold">Blockshare</h2>
+          <h2 class="display-4 girl-bye font-weight-bold" >Identification</h2>
+          <h2 class="display-4 girl-bye font-weight-bold">Number</h2>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 px-5 mt-3 ">
+             <p class="text-justify"> The IBIN Website is the world's first and transparent company registrar for all digital assets. Easy to use and linked to the DIM Ecosystem.
+              Register your company today and apply for a listing on the Hybrid Stock Exchange.</p>
+
+
+              <br><br><br>
+             <a href=""  class="mt-5 py-3 px-3" mdbBtn color="primary" mdbWavesEffect>VIEW PROCESS</a> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="mt-5 py-3 px-3" mdbBtn color="primary" mdbWavesEffect>REGISTER ADMIN</a>
+
+
+      </div>
+
+  </div>
+
+</div>
+</div>
+<br><br> <br>
+</section>
+
+<div class="jumbotron">
+<h3 class="text-center text-white font-weight-bold">HOME</h3>
+</div>
+
+<div class="container-fluid" id="contentdata">
+  <div class="row move-row">
+          <div class="col-lg-7 col-md-12 col-sm-12 ">
+                  <h4 class="form-signin-heading mt-5 to-the-left text-dark"><b>DATABASE</b></h4><br>
+              <div class="block mb-5">
+
+                    <br><br>
+                    <mdb-card-body class="px-5">
+                    <form class="form-signin text-center" role="form" action="" method="POST" enctype="multipart/form-data">
+
+                              <h5 class="form-signin-heading text-center"><b>Search</b></h5><br>
+                              <div class="form-group">
+
+                                      <input type="text" class="form-control px-5" id="usr" name="company"placeholder="International Blockshare Identification Number/ Company name">
+                              </div>
+
+                              <button mdbBtn color="primary" mdbWavesEffect class="col-lg-3" type="submit"><i class="fa fa-search " aria-hidden="true"></i></button>
+
+                      </form>
+                    </mdb-card-body>
+                  <br><br>
+
+              </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12 col-sm-12">
+
+              <div class="container">
+                  <form (submit)="onLoginForm(loginForm)" class="text-center border border-light p-5 mt-5 admincolor" #loginForm="ngForm">
+
+                      <!-- E-mail -->
+                                      <div class="md-form mt-0">
+                                          <input type="email" id="materialRegisterFormEmail" class="form-control" name="email" ngModel #emailInput="ngModel" required email mdbInput>
+                                          <mdb-error *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">Please Enter Valid Email</mdb-error>
+                                          <label for="materialRegisterFormEmail" class="text-dark">E-mail</label>
+                                      </div>
+
+                        <!-- Password -->
+                                      <div class="md-form">
+                                          <input type="password" id="materialRegisterFormPassword" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock"
+                                          name="password" ngModel #passwordInput="ngModel" required mdbInput>
+                                          <mdb-error *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">Please Enter Valid Password</mdb-error>
+                                          <label for="materialRegisterFormPassword" class="text-dark">Password</label>
+                                              <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                                                  At least 8 characters and 1 digit
+                                              </small>
+                                      </div>
+
+                                      <button mdbBtn color="primary" outline="true" rounded="true" block="true" class="my-4 waves-effect z-depth-0" mdbWavesEffect
+                                          type="submit" [disabled]="!loginForm.valid">Sign in
+                                      </button>
+
+                                  </form>
+              </div>
+           </div>
+
+  </div>
+</div>
